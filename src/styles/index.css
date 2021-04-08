@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flexCenter{
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    border-bottom: solid lightgray 1px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.listContainer{
+    width: 80%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    border: solid gray 1px;
+    border-radius: 10px;
+}
+
+.listItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    text-decoration: none;
+}
+
+.listItem:not(:last-child){
+    border-bottom: solid gray 1px;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-height: 200px;
+    padding: 10px;
+}
+
+.form, .formButtonContainer  {
+    width: 50%;
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.form {
+    flex-direction: column;
+}
+
+.textBold{
+    font-weight: bold;
+}
+
+.title{
+    text-align: center;
+    font-size: 25px;
+    margin: 3px;
+}
+
+.text{
+    font-size: 16px;
+    margin: 3px;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+    border: solid gray 1px;
+}
+
+.input {
+    border: solid lightgray 1px;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.button{
+    background: orange;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    padding: 7px;
+    margin: 5px;
+}
+
+.button:hover {
+    opacity: .8;
+}
+
+.errorBackground {
+    background-color: red;
+}
+
+@media (max-width: 500px){
+    .formContainer, .form, .formButtonContainer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px){
+    .formContainer, .form, .formButtonContainer {
+        width: 80%;
+    }
+}
