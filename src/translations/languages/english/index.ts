@@ -6,5 +6,6 @@ export const en = {
     delete: 'Delete',
     page_not_found: 'Page not Found',
     go_home: 'Go to home page',
-    title_required: 'Title is requiered'
+    title_required: 'Title is requiered',
+    snapshot: 'my snapshot'
 }

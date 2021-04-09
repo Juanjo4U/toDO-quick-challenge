@@ -12,10 +12,12 @@ export const functionWithCache = (myFunction: AnyFunction): AnyFunction => {
 }
 
 export const getFromObj = (key: string): AnyFunction => {
+    const type = typeof key;
+    if (type !== 'string' && type !== 'number') throw new Error(`KEY HAS TO BE AN STRING`);
     return (obj: AnyObject): any => obj[key];
 }
 
-export const pipeFromObj = (...functions: Array<AnyFunction>): any => {
+export const pipeFromObj = (...functions: Array<AnyFunction>): AnyFunction => {
     return functionWithCache((state: AnyObject): any => {
         let result = state;
         for (let i = 0, end = functions.length; i < end; i++) {

@@ -6,5 +6,6 @@ export const es = {
     delete: 'Eliminar',
     page_not_found: 'La pagina no existe',
     go_home: 'Ir a la pantalla principal',
-    title_required: 'El titulo es obligatorio'
+    title_required: 'El titulo es obligatorio',
+    snapshot: 'mi snapshot'
 }

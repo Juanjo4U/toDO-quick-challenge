@@ -1,6 +1,6 @@
-import { ToDoDataType, ToDoType } from "../../../utils/types_&_interfaces";
-import { AnyObject, AnyFunction, ObjectType } from "../../../utils/types_&_interfaces/basics";
-import { pipeFromObj as pipe, getFromObj as get } from "../../../utils/utilities";
+import { ToDoDataType, ToDoType } from "../../../../utils/types_&_interfaces";
+import { AnyObject, AnyFunction, ObjectType } from "../../../../utils/types_&_interfaces/basics";
+import { pipeFromObj as pipe, getFromObj as get } from "../../../../utils/utilities";
 
 const list = get('lists');
 
@@ -18,7 +18,7 @@ export const selectTodoListArray = pipe(
     formatTodoList
 );
 
-export const getSelectToDoById: AnyFunction = pipe(
+export const getSelectToDoById = pipe(
     selectTodoList,
     (toDoList = {}) => ({ id }: AnyObject): ToDoType => toDoList[id] || {}
 );
